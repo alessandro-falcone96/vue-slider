@@ -7,9 +7,28 @@
     <!-- Css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Title -->
-    <title></title>
+    <title>Carousel Vue</title>
   </head>
   <body>
+
+    <main>
+      <div class="container-slider" id="slider">
+        <div class="caret">
+          <i class="fas fa-caret-left fa-3x" v-on:click="clickPrev"></i>
+        </div>
+        <div class="immagine">
+          <img :src="images[imagesIndex]" alt="">
+        </div>
+        <div class="caret">
+          <i class="fas fa-caret-right fa-3x" v-on:click="clickNext"></i>
+        </div>
+        <div class="bullets">
+          <ul>
+            <li v-for="(image, index) in images"><i :class="index == imagesIndex ? 'active' : ''" class="fas fa-circle fa-lg"></i></li>
+          </ul>
+        </div>
+      </div>
+    </main>
 
     <!-- Vue (Development Version) -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
