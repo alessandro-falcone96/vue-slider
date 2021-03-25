@@ -3,6 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Header */
+header{
+  background-color: blue;
+  height: 10vh;
+}
+h1{
+  text-align: center;
+  line-height: 10vh;
+  font-size: 50px;
+  color: white;
+}
+
+/* Main */
+main{
+  background-color: rgba(0, 4, 214, 0.64);
+  height: 90vh;
+}
 .container-slider{
   display: flex;
   justify-content: center;
